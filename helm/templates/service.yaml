@@ -1,0 +1,14 @@
+kind: Service
+appVersion: v1
+metadata:
+ name: mongodb
+ namespace: roboshop
+spec:
+  selector:
+    app: mongodb
+    project: roboshop
+    tier: db
+  ports:
+  - protocol: TCP
+    port: 27017 #service port
+    targetPort: 27017 #container port
